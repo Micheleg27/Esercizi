@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Lezione HTML</title>
+	<style>
+		label {
+			display: block
+		}
+
+		div {
+			padding: 2px;
+			margin: 2px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<form action="start.html" method="post">
+
+		<h1>Form di registrazione</h1>
+
+		<p>I campi contrassegnati con <strong><abbr title="richiesto">*</abbr></strong> sono obbligatori</p>
+		<hr>
+		<section>
+
+			<h2>Inserisci i tuoi dati:</h2>
+			<fieldset>
+				<legend>Dati anagrafici</legend>
+				<div>
+					<label for="email">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>E-mail: </span>
+					</label>
+
+					<input type="email" name="email" id="email" autocomplete="email" required />
+
+				</div>
+
+				<div>
+					<label for="password">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>Password: </span>
+					</label>
+
+					<input type="password" name="password" id="password" required />
+				</div>
+
+				<div>
+					<label for="name">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>Nome e cognome: </span>
+					</label>
+
+					<input type="text" name="name" id="name" required />
+
+				</div>
+
+				<div>
+					<label for="date">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>Data di nascita: </span>
+					</label>
+
+					<input type="date" name="date" id="date" min="1900-01-01" max="2010-01-01" required />
+
+				</div>
+
+				<div>
+					<label for="telephone">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>Numero di telefono: </span>
+					</label>
+
+					<input type="tel" name="telephone" id="telephone" maxlength="10" required />
+
+				</div>
+			</fieldset>
+		</section>
+		<br />
+
+		<fieldset>
+			<legend>Dati di abbonamento: </legend>
+			<section>
+				<div>
+					<label for="select">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>Seleziona un abbonamento: </span>
+						<select name="select" id="select">
+							<option value="piano-free">Abbonamento free</option>
+							<optgroup>
+								<option value="piano-mensile">Abbonamento mensile <strong>(10,99€)</strong></option>
+								<option value="piano-trimestrale">Abbonamento trimestrale <strong>(25,99€)</strong>
+								</option>
+								<option value="piano-annuale">Abbonamento annuale <strong>(105,99€)</strong></option>
+							</optgroup>
+						</select>
+					</label>
+				</div>
+
+				<div>
+					<label for="pro">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<input type="checkbox" name="pro" id="pro">
+						<span>Attiva i vantaggi pro</span>
+					</label>
+				</div>
+
+				<div>
+					<label for="owner">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>Intestatario carta: </span>
+						<input type="text" name="owner" id="owner" required>
+					</label>
+
+					<label for="carta">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>Numero carta: </span>
+					</label>
+
+					<input type="text" name="carta" id="carta" pattern="[0-9]{3,4}" size="4" maxlength="4" required> <span>-</span>
+					<input type="text" name="carta" id="carta" pattern="[0-9]{3,4}" size="4" maxlength="4" required> <span>-</span>
+					<input type="text" name="carta" id="carta" pattern="[0-9]{3,4}" size="4" maxlength="4" required> <span>-</span>
+					<input type="text" name="carta" id="carta" pattern="[0-9]{3,4}" size="4" maxlength="4" required>
+
+				</div>
+
+				<div>
+					<label for="cvc">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>CVC: </span>
+					</label>
+
+					<input type="text" pattern="[0-9]{3,4}" name="cvc" id="carta" size="3" maxlength="3" required>
+
+				</div>
+
+				<div>
+					<label for="scadenza">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>Scadenza: </span>
+					</label>
+
+					<input type="month" name="scadenza" id="scadenza" min="2022-06" max="2030-01" required>
+
+				</div>
+
+
+
+		</fieldset>
+		</section>
+		
+		<br />
+
+		<section>
+			<fieldset>
+				<legend>Indirizzo di fatturazione: </legend>
+
+				<div>
+					<label for="name">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>Nome e cognome: </span>
+					</label>
+
+					<input type="text" name="name" id="name" required />
+
+				</div>
+
+				<div>
+					<label for="address">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>Indirizzo: </span>
+					</label>
+
+					<input type="text" name="address" id="address" required />
+
+				</div>
+
+				<div>
+					<label for="city">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>Città: </span>
+					</label>
+
+					<input type="text" name="city" id="city" required />
+				</div>
+
+				<div>
+					<label for="cap">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>Codice postale: </span>
+					</label>
+
+					<input type="text" name="cap" pattern="[0-9]{5}" id="cap" size="5" maxlength="5" required />
+				</div>
+
+				<div>
+					<label for="country">
+						<strong><span><abbr title="richiesto">*</abbr></span></strong>
+						<span>Paese: </span>
+					</label>
+
+					<input type="text" name="country" id="country" required />
+				</div>
+
+			</fieldset>
+		</section>
+
+<hr />
+
+		<button type="submit">INVIO</button>
+
+	</form>
+</body>
+</html>

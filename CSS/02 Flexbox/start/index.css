@@ -8,17 +8,17 @@
 /* Impostazione navbar */
 
 #container-flex-nav {
-    width: 200px;
-    height: 100vh;
+    max-width: 200px;
+    min-height: 97vh;
     display: flex;
     flex-flow: column;
     background-color:wheat;
-    border-radius: 10px 10px 10px 10px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px;
 }
 
-/* Placeholder logo, ul links , avatar e nome */
+/* Placeholder logo */
 
 #box-logo {
     height: 100px;
@@ -26,29 +26,38 @@
     border: 2px;
 }
 
+/* Ul links  */
 
 #link-list {
     flex: 1;
-    text-align: center;
 }
 
-#avatar-name {
+#ul-list {
+    list-style-type: none;
+}
 
+/* Avatar e nome */
+
+#avatar-image {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #name {
     color: black;
-    margin: 5px;
-    padding: 5px;
+    font-weight: 800;
+    font-style: italic;
 }
 
-#avatar {
-    height: 80px;
-    width: 80px;
+#avatar-image {
+    height: 75px;
+    width: 75px;
     border-radius: 50%;
-    margin: 5px;
-    padding:5px;
-    background-color: black;
+    border: solid 2px;
+    margin-left: 15px;
+    margin-top: 5px;
 }
 
 /* Stile dei link */
@@ -61,4 +70,5 @@
 .links:hover {
     color: #2b2bb2;
     transition: 0.3s;
+    cursor: crosshair;
 }

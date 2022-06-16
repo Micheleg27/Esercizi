@@ -5,13 +5,17 @@
     padding: 0;
 }
 
+body, html {
+    height: 100%;
+}
+
 /* Impostazione navbar */
 
 #container-flex-nav {
     max-width: 200px;
-    min-height: 97vh;
+    height: 100%;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     background-color:wheat;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +28,6 @@
     height: 100px;
     width: 100px;
     border: 2px;
-    flex: 2 20%;
 }
 
 /* Ul links  */
@@ -39,12 +42,11 @@
 
 /* Avatar e nome */
 
-#avatar-image {
+#avatar-name {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
     align-items: center;
-    flex: 2 20%;
 }
 
 #name {
@@ -58,10 +60,12 @@
     width: 75px;
     border-radius: 50%;
     border: solid 2px;
-    margin-left: 15px;
-    margin-top: 5px;
     justify-content: center;
     align-items: center;
+    background-image: url(./img_avatar.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Stile dei link */

@@ -1,0 +1,44 @@
+* {
+    margin: auto;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+#container-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+.card-gattini {
+    height: 400px;
+    width: 260px;
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+.navbar {
+    height: 55px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+#paragraph {
+    flex: 1 60%;
+    margin: 5px;
+}
+
+#avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

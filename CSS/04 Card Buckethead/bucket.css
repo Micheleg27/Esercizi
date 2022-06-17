@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    font-size: 14px;
+}
+
+#bucket-article {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 250px;
+    /* border-collapse: collapse; */
+}
+
+#card-image {
+    background-image: url(./bucket.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 1;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#card-paragraph {
+    flex: 1;
+    margin: auto;
+}
+
+.divs-1, .divs-2 {
+    border: 1px solid gray;
+}
+
+.paragraph {
+    margin: 5px;
+    padding: 5px;
+}
+
+#card-links {
+    display: flex;
+    flex-direction: row;
+    border-radius: 0px 0px 10px 10px;
+}

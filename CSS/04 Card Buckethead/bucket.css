@@ -10,14 +10,13 @@
     flex-direction: column;
     height: 550px;
     width: 300px;
-    /* border-collapse: collapse; */
 }
 
 #card-image {
     flex: 1;
     border-radius: 10px 10px 0px 0px;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     overflow: hidden;
 }
 
@@ -26,6 +25,7 @@
     min-width: 100%;
     min-height: 100%;
     max-width: 100%;
+
 }
 
 #card-paragraph {
@@ -35,6 +35,8 @@
 
 .divs-1, .divs-2 {
     border: 1px solid gray;
+    border-collapse: collapse;
+    border-spacing: 1px;
 }
 
 .paragraph {

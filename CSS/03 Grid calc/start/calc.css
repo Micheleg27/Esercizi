@@ -1,7 +1,6 @@
 * {
     font-size: 20px;
     font-weight: 400;
-    box-sizing: border-box;
 }
 
 #grid-container {
@@ -13,8 +12,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    align-items: center;
-    justify-content: center;
     text-align: center;
     background-color:azure;
     color: black;
@@ -25,8 +22,6 @@
     grid-column-end: 5;
     border-radius: 15px 15px 0px 0px;
     text-align: right;
-    justify-content: center;
-    justify-items: center;
     font-size: 1.2em;
     background-color: slategray;
     color: white;
@@ -43,10 +38,7 @@
     grid-column: 4;
     grid-row-start: 3;
     grid-row-end: 7;
-    /* text-align: center; */
     line-height: 239.69px;
-    align-items: center;
-    justify-content: center;
     text-align: center;
 }
 

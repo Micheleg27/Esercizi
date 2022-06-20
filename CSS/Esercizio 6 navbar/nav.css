@@ -49,6 +49,12 @@
     display: none;
 }
 
+#navbar-par {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+}
+
 @media (max-width: 768px) {
     #links-list {
         display: none;
@@ -70,5 +76,12 @@
         height: 50px;
         display: flex;
         justify-content: flex-end;
+    }
+
+    #navbar-par {
+        display: block;
+        margin: 10px;
+        padding: 10px;
+        text-shadow: 1px 1px white;
     }
 }

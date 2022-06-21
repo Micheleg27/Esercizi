@@ -1,3 +1,5 @@
+/* Impostazioni Generali */
+
 * {
     margin: auto;
     padding: 0;
@@ -7,38 +9,133 @@ body, html {
     height: 100%;
     width: 100%;
     font-size: 16px;
+    font-family:Arial, Helvetica, sans-serif
 }
 
-#container-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center; 
+/* Media query con i 3 tipi di Flex */
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    #container-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        gap: 60px;
+    }
 }
+
+@media screen and (min-width: 767.98px) and (max-width: 1199.98px) {
+    #container-card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+        gap: 60px;
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    #container-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+    }
+}
+
+/* Caratteristiche delle card */
 
 .card-gattini {
-    height: 400px;
-    width: 260px;
-    background-color: gray;
+    height: 420px;
+    width: 280px;
     border: 2px solid black;
     border-radius: 5%;
+    box-shadow: 3px 3px black;
 }
+
+#gattino-1 {
+    background-image: linear-gradient(red, burlywood);
+}
+
+#gattino-2 {
+    background-image: linear-gradient(purple, white);
+}
+
+#gattino-3 {
+    background-image: linear-gradient(gray, blue);
+}
+
+/* Navbar delle card */
 
 .navbar {
     height: 55px;
-    width: 80%;
+    width: 95%;
     display: flex;
     flex-direction: row;
-    margin: auto;
+}
+
+.div-avatar {
+    flex-grow: 1;
 }
 
 #paragraph {
-    flex: 1 60%;
+    flex-grow: 3;
     margin: 5px;
 }
 
+#paragraph-2 {
+    color: white;
+}
+
+#paragraph-3 {
+    flex-grow: 1;
+}
+
+#par-3p {
+    font-size: 26px;
+    text-align: center;
+    justify-content: center;
+    line-height: 55px;
+}
+
 #avatar {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+/* Proprietà immagini delle card */
+
+#blaziken {
+    height: 160px;
+    width: 250px;
+    object-fit: cover;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+/* Proprietà icon */
+
+.div-icon {
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.fa-solid, .fa-heart, .fa-comment {
+    color:black;
+}
+
+/* Proprietà div paragrafo 4  */
+
+.div-paragraph4 {
+    margin: 5px;
+    text-align: justify;
+    text-justify: inter-word;
 }

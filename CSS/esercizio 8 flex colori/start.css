@@ -5,28 +5,31 @@ body, html {
 #container-flex {
     display: flex;
     flex-direction: row;
-
 }
 
 #yellow {
+    flex: 1;
     order: 1;
 }
 
 #red {
-    order: 1;
-}
-
-#green {
+    flex: 1;
     order: 2;
 }
 
-#orange {
+#green {
     flex: 1;
     order: 3;
 }
 
+#orange {
+    flex: 3;
+    order: 4;
+}
+
 #blue {
-    order: 3;
+    flex: 1;
+    order: 5;
 } 
 
 

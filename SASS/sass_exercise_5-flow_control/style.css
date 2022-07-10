@@ -1,0 +1,178 @@
+.container-flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.container-flex .fs-1rem, .container-flex .fs-2rem, .container-flex .fs-3rem {
+  height: 2.8125rem;
+  width: 2.8125rem;
+}
+
+.fs-1rem {
+  font-size: 1rem;
+}
+
+.fs-2rem {
+  font-size: 2rem;
+}
+
+.fs-3rem {
+  font-size: 3rem;
+}
+
+.container-flex :nth-child(1n+1) {
+  background-color: #f2f2f2;
+  color: #0d0d0d;
+}
+
+.container-flex :nth-child(1n+2) {
+  background-color: #e6e6e6;
+  color: #1a1a1a;
+}
+
+.container-flex :nth-child(1n+3) {
+  background-color: #d9d9d9;
+  color: #262626;
+}
+
+.container-flex :nth-child(1n+4) {
+  background-color: #cccccc;
+  color: #333333;
+}
+
+.container-flex :nth-child(1n+5) {
+  background-color: #bfbfbf;
+  color: #404040;
+}
+
+.container-flex :nth-child(1n+6) {
+  background-color: #b3b3b3;
+  color: #4d4d4d;
+}
+
+.container-flex :nth-child(1n+7) {
+  background-color: #a6a6a6;
+  color: #595959;
+}
+
+.container-flex :nth-child(1n+8) {
+  background-color: #999999;
+  color: #666666;
+}
+
+.container-flex :nth-child(1n+9) {
+  background-color: #8c8c8c;
+  color: #737373;
+}
+
+.container-flex :nth-child(1n+10) {
+  background-color: gray;
+  color: gray;
+  background-color: blue;
+  color: red;
+}
+
+.container-flex :nth-child(1n+11) {
+  background-color: #737373;
+  color: #8c8c8c;
+}
+
+.container-flex :nth-child(1n+12) {
+  background-color: #666666;
+  color: #999999;
+}
+
+.container-flex :nth-child(1n+13) {
+  background-color: #595959;
+  color: #a6a6a6;
+}
+
+.container-flex :nth-child(1n+14) {
+  background-color: #4d4d4d;
+  color: #b3b3b3;
+}
+
+.container-flex :nth-child(1n+15) {
+  background-color: #404040;
+  color: #bfbfbf;
+}
+
+.container-flex :nth-child(1n+16) {
+  background-color: #333333;
+  color: #cccccc;
+}
+
+.container-flex :nth-child(1n+17) {
+  background-color: #262626;
+  color: #d9d9d9;
+}
+
+.container-flex :nth-child(1n+18) {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+}
+
+.container-flex :nth-child(1n+19) {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+
+.container-flex :nth-child(1n+20) {
+  background-color: black;
+  color: white;
+}
+
+div .h2-class, div .h1-class {
+  color: green;
+  text-align: center;
+}
+
+div {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+div .h1-class {
+  text-decoration: underline blue;
+}
+div .h2-class {
+  padding: 1rem;
+  border: solid 1px red;
+  width: fit-content;
+  align-self: center;
+}
+
+article {
+  color: red;
+  border: 1px solid green;
+  font-size: 1.5rem;
+}
+
+.main {
+  display: flex;
+  margin: 15px;
+}
+.main p {
+  margin: 1.25rem;
+  text-align: center;
+  font-size: 0.9em;
+}
+.main .blue-p {
+  color: blue;
+}
+.main .red-p {
+  color: red;
+}
+
+.footer {
+  color: green;
+  border: 1px solid blue;
+  font-size: 1.5rem;
+  margin: 15px;
+}
+
+p {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

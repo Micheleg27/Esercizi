@@ -1,0 +1,92 @@
+@use 'property';
+@use 'function';
+
+.container-flex {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    .fs-1rem, .fs-2rem, .fs-3rem {
+        height: function.rem(45);
+        width: function.rem(45);
+    }
+}
+
+$size: 1rem, 2rem, 3rem; 
+
+@each $value in $size {
+    .fs-#{$value} {
+        font-size: $value;
+    }
+}
+
+
+@for $i from 1 through 20{
+    .container-flex :nth-child(1n + #{$i}){
+        background-color: darken(property.$color-white, $i * 5%);
+        color: lighten(property.$base-color, $i * 5%);
+        @if $i == 10 {
+            background-color: property.$color-blue;
+            color: property.$color-red;}      
+     }
+}
+
+%h-style {
+            color: property.$color-green;
+            text-align: center;
+}
+
+
+div {
+    border: 1px solid property.$color-red;
+    display: flex;
+    flex-direction: column;
+
+        & .h1-class {
+            @extend %h-style;
+            text-decoration: underline property.$color-blue;
+        }
+
+        & .h2-class {
+            @extend %h-style;
+            padding: 1rem;
+            border: solid 1px red;
+            width: fit-content;
+            align-self: center;
+        }
+
+        
+    } 
+    
+    article {
+    color: property.$color-red;
+    border: 1px solid property.$color-green;
+    font-size: function.rem(24);}
+    
+        .main { 
+                display: flex;
+                margin: 15px;
+                                    p { margin: function.rem(20);
+                                    text-align: center;
+                                    font-size: 0.9em;
+                                    }
+    
+                                    & .blue-p {
+                                    color: property.$color-blue; 
+                                    }
+    
+                                    & .red-p {
+                                    color: property.$color-red;
+                                    } 
+                }
+
+        .footer {
+                color: property.$color-green;
+                border: 1px solid property.$color-blue;
+                font-size: function.rem(24);
+                margin: 15px;
+                }
+    
+                p {
+                    text-align: center;
+                }

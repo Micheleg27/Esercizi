@@ -1,29 +1,51 @@
 .container {
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .container .ball {
   height: 50px;
   width: 50px;
   border-radius: 50%;
   background-color: blue;
-  animation: bounce 1s infinite;
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
   justify-self: flex-end;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(calc(-30px/2));
+            transform: translateY(calc(-30px/2));
+  }
 }
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   40% {
-    transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
   }
   60% {
-    transform: translateY(-15px);
+    -webkit-transform: translateY(calc(-30px/2));
+            transform: translateY(calc(-30px/2));
   }
 }
-
 /*# sourceMappingURL=style.css.map */

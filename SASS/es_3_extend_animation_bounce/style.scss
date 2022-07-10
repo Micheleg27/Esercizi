@@ -1,0 +1,23 @@
+@use "bg-random";
+
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    display: flex;
+}
+
+%bg-random {
+    background-color: hex-generator();
+}
+
+.bounce {
+    @extend %bg-random;       
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    background-color: blue;
+    /* animation: bounce 1s infinite; */
+    justify-self: flex-end;
+    align-self: flex-end;
+}

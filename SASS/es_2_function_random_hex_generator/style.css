@@ -1,0 +1,69 @@
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.col {
+  height: 200px;
+  width: 60px;
+}
+
+.col:nth-child(0) {
+  background-color: #29C349;
+}
+
+.col:nth-child(1) {
+  background-color: #9D3E69;
+}
+
+.col:nth-child(2) {
+  background-color: #E51364;
+}
+
+.col:nth-child(3) {
+  background-color: #2893DC;
+}
+
+.col:nth-child(4) {
+  background-color: #E2899B;
+}
+
+.col:nth-child(5) {
+  background-color: #B86BE9;
+}
+
+.col:nth-child(6) {
+  background-color: #518EE8;
+}
+
+.col:nth-child(7) {
+  background-color: #62555A;
+}
+
+.col:nth-child(8) {
+  background-color: #E65AB6;
+}
+
+.col:nth-child(9) {
+  background-color: #3CA1BA;
+}
+
+.col:nth-child(10) {
+  background-color: #612DEE;
+}
+
+.col:nth-child(11) {
+  background-color: #3FAECD;
+}
+
+.col:nth-child(12) {
+  background-color: #AB918E;
+}
+
+/*# sourceMappingURL=style.css.map */

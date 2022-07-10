@@ -1,0 +1,46 @@
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    display: flex;
+    .ball {
+        height:50px;
+        width:50px;
+        border-radius: 50%;
+        background-color: blue;
+        /* animation: bounce 1s infinite; */
+        justify-self: flex-end;
+        align-self: flex-end;
+    }
+}
+
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0px);
+        // height: 50px;
+        // width: 50px;
+        // @include bounce (translateY(240px));
+    }
+    20%{
+        transform: translateY(0px);
+        // height: 50px;
+        // width: 40px;
+        // @include bounce ( width(40px));
+        // @include bounce ( height(50px));
+        // @include bounce (translateY(220px));
+    }
+    40%{
+        transform: translateY(-45px);
+        // @include bounce ( width(57px));
+        // @include bounce ( height(30px));
+}
+
+    60% {
+        transform: translateY(-35px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

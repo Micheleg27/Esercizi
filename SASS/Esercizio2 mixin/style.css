@@ -1,0 +1,49 @@
+div {
+  border: 1px solid red;
+}
+
+div h1 {
+  color: green;
+  text-align: center;
+  -webkit-text-decoration: underline blue;
+          text-decoration: underline blue;
+}
+
+article {
+  color: red;
+  border: 1px solid green;
+  font-size: 1rem;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px;
+}
+
+.main p {
+  margin: 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.main .blue-p {
+  color: blue;
+}
+
+.main .red-p {
+  color: red;
+}
+
+.footer article {
+  color: green;
+  border: 1px solid blue;
+  font-size: 24px;
+  margin: 15px;
+}
+
+.footer p {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

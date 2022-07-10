@@ -1,3 +1,7 @@
+$color-red: red;
+$color-green: green;
+$color-blue: blue;
+
 div {
     border: 1px solid $color-red;
 
@@ -8,14 +12,17 @@ div {
         }
     } 
 
-        section { 
+    @mixin article-card ($color, $border, $font-size) {
+        color: $color;
+        border: $border;
+        font-size: $font-size;
+    }
+
+    article { @include article-card(red, 1px solid green, 1rem); }
+
+        .main { 
                 display: flex;
                 margin: 15px;
-                        article {
-                                border: 1px solid $color-green;
-                                justify-content: center;
-                                align-items: center;
-
                                     p { margin: 20px;
                                     text-align: center;
                                     font-size: 0.9em;
@@ -27,7 +34,14 @@ div {
 
                                     .red-p {
                                     color: $color-red;
-                                    }
-                            
-                                }
+                                    } 
                 }
+
+        .footer {
+                article { @include article-card(green, 1px solid blue, 24px); 
+                margin: 15px;}
+
+                p {
+                    text-align: center;
+                }
+        }

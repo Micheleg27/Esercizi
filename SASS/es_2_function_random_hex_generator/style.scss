@@ -1,0 +1,57 @@
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.col {
+    height: 200px;
+    width: 60px;
+}
+
+@function hex-generator() {
+    $color: "#";
+    @for $i from 1 through 6 {
+      $semicolor: random(15);
+      @if $semicolor > 9 {
+        @if $semicolor == 10 {
+          $color: $color + "A";
+        } @else {
+          @if $semicolor == 11 {
+            $color: $color + "B";
+          } @else {
+            @if $semicolor == 12 {
+              $color: $color + "C";
+            } @else {
+              @if $semicolor == 13 {
+                $color: $color + "D";
+              } @else {
+                @if $semicolor == 14 {
+                  $color: $color + "E";
+                } @else {
+                  @if $semicolor == 15 {
+                    $color: $color + "F";
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      @else {
+        $color: $color + $semicolor;
+      }
+    }
+    @return unquote($color);
+}
+
+@for $i from 0 through 12{
+      .col:nth-child(#{$i}){
+        background-color: hex-generator();
+      }
+    }

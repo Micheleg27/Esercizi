@@ -1,0 +1,47 @@
+@use 'property';
+@use 'function';
+
+div {
+    border: 1px solid property.$color-red;
+
+        h1 {
+            color: property.$color-green;
+            text-align: center;
+            text-decoration: underline property.$color-blue;
+        }
+
+        
+    } 
+    
+    article {
+    color: property.$color-red;
+    border: 1px solid property.$color-green;
+    font-size: function.rem(24);}
+    
+        .main { 
+                display: flex;
+                margin: 15px;
+                                    p { margin: function.rem(20);
+                                    text-align: center;
+                                    font-size: 0.9em;
+                                    }
+    
+                                    .blue-p {
+                                    color: property.$color-blue; 
+                                    }
+    
+                                    .red-p {
+                                    color: property.$color-red;
+                                    } 
+                }
+    
+        .footer {
+                color: property.$color-green;
+                border: 1px solid property.$color-blue;
+                font-size: function.rem(24);
+                margin: 15px;
+                }
+    
+                p {
+                    text-align: center;
+                }

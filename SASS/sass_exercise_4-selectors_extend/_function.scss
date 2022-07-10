@@ -1,0 +1,4 @@
+@function rem($num) {
+    $remvalue: calc($num / 16) + rem;
+    @return $remvalue;
+}

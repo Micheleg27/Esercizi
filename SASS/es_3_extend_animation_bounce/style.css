@@ -1,5 +1,5 @@
-.bounce:nth-child(1) {
-  background-color: #C21CF2;
+.bg-random, .bounce {
+  background-color: random-hex();
 }
 
 .container {
@@ -10,14 +10,9 @@
 }
 
 .bounce {
-  background-color: hex-generator();
-}
-
-.bounce {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-color: blue;
   /* animation: bounce 1s infinite; */
   justify-self: flex-end;
   align-self: flex-end;

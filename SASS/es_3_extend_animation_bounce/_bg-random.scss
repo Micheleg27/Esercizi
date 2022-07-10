@@ -1,4 +1,4 @@
-@function hex-generator() {
+@function random-hex() {
     $color: "#";
     @for $i from 1 through 6 {
       $semicolor: random(15);
@@ -33,9 +33,3 @@
     }
     @return unquote($color);
 }
-
-@for $i from 1 through 1{
-      .bounce:nth-child(#{$i}){
-        background-color: hex-generator();
-      }
-    }

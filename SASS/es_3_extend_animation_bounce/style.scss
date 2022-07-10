@@ -1,4 +1,8 @@
-@use "bg-random";
+@import 'bg-random';
+
+.bg-random {
+    background-color: random-hex();
+}
 
 .container {
     width: 500px;
@@ -7,16 +11,11 @@
     display: flex;
 }
 
-%bg-random {
-    background-color: hex-generator();
-}
-
 .bounce {
-    @extend %bg-random;       
+    @extend .bg-random;
     height:50px;
     width:50px;
     border-radius: 50%;
-    background-color: blue;
     /* animation: bounce 1s infinite; */
     justify-self: flex-end;
     align-self: flex-end;

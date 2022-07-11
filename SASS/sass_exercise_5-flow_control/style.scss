@@ -21,10 +21,11 @@ $size: 1rem, 2rem, 3rem;
 }
 
 
-@for $i from 1 through 20{
+@for $i from 1 through 1{
     .container-flex :nth-child(1n + #{$i}){
         background-color: darken(property.$color-white, $i * 5%);
         color: lighten(property.$base-color, $i * 5%);
+        
         @if $i == 10 {
             background-color: property.$color-blue;
             color: property.$color-red;}      

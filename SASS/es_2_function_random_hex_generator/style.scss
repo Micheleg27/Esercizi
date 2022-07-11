@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 body {
   height: 100vh;
   width: 100vw;
@@ -16,36 +18,15 @@ body {
 
 @function hex-generator() {
     $color: "#";
+    $letters: A, B, C, D, E, F;
+
     @for $i from 1 through 6 {
-      $semicolor: random(15);
+      $semicolor: random(16)-1;
       @if $semicolor > 9 {
-        @if $semicolor == 10 {
-          $color: $color + "A";
-        } @else {
-          @if $semicolor == 11 {
-            $color: $color + "B";
-          } @else {
-            @if $semicolor == 12 {
-              $color: $color + "C";
-            } @else {
-              @if $semicolor == 13 {
-                $color: $color + "D";
-              } @else {
-                @if $semicolor == 14 {
-                  $color: $color + "E";
-                } @else {
-                  @if $semicolor == 15 {
-                    $color: $color + "F";
-                  }
-                }
-              }
-            }
-          }
-        }
+        $semicolor: $semicolor - 9;
+        $semicolor: list.nth($letters, $semicolor);
       }
-      @else {
         $color: $color + $semicolor;
-      }
     }
     @return unquote($color);
 }

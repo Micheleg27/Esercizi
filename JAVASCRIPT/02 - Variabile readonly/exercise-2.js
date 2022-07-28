@@ -1,5 +1,5 @@
 function canPlay() {
-  const personName = Object.freeze({ name: 'Paul'});
+  const personName = 'Paul';
 
   if (true) {
     personName = 'George'; // Argh! Voglio che personName sia una variabile di sola lettura

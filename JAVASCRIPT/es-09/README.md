@@ -14,5 +14,5 @@ const person = {
 };
 
 const keys = getKeys(person);
-console.log(keys); // ['firstName', 'lastName', 'age', 'city', 'job']
+console.log(keys); // ['firstName', 'lastName', 'age', 'city', 'job'
 ```

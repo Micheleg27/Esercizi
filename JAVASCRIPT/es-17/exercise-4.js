@@ -2,13 +2,26 @@ function calculate() {
     let appogg = 0;
 
     return operations = {
-        add: function(a) {
-            return appogg = $this.a + appogg;
+        add(number) {
+            appogg = appogg + number;
+            return this;
         },
-        multiply: function(b) {
-
+        multiply(number) {
+            appogg = appogg * number;
+            return this;
+        },
+        sub(number) {
+            appogg = appogg - number;
+            return this;
+        },
+        divide(number) {
+            appogg = appogg / number;
+            return this
+        },
+        printResult() {
+            console.log(appogg);
+        }
     }
-}
 }
 
 const calculator = calculate();

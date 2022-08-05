@@ -8,11 +8,9 @@ const person = {
   },
 
   info() {
-    if{
-    typeof
-    }
-    return Object.values(person);
-    }
+    return `${this.fullName()} , ${this.age} , ${this.job}`;
+  }
+}
 
 console.log(person.fullName()); // John Doe
 console.log(person.info()); // John Doe, 25 - Web Developer

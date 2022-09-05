@@ -34,4 +34,32 @@ const jobs = [
   }
 ];
 
-// core here
+function fetchPersonById(collection, id, reject)  {
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {
+          const item = collection.find(item => item.id === id);
+
+          if(item){
+            return resolve(JSON.stringify(item))
+          }
+          return reject()
+      }, 1000)
+  })
+}
+
+function fetchJobById(collection, id, reject)  {
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {
+          const item = collection.find(item => item.id === id);
+
+          if(item){
+            return resolve(JSON.stringify(item))
+          }
+          return reject()
+      }, 500)
+  })
+}
+
+Promise.race([fetchPersonById(3), fetchJobById(3)]).then((values) => {
+  console.log(values);
+});

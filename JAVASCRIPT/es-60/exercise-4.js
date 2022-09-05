@@ -54,10 +54,10 @@ function fetchPersonById(id){
 
 function fetchJobById(id){
   const reject = () => Promise.reject(`Person with id: ${id} doesn't exist`);
-  return fetchById(persons, jobs, reject)
+  return fetchById(jobs, id, reject)
 }
 
-Promise.all(fetchPersonById(1), fetchJobById(3))
+Promise.all([fetchPersonById(1), fetchJobById(3)])
 .then((results) => results.map(result => JSON.parse(result)))
 .then((results) => console.log(results))
 .catch((err) => console.error(err));

@@ -33,7 +33,4 @@ function fetchPersonById(id) {
   });
 }
 
-let promise = fetchPersonById(2);
-promise.then((person) => {
-  console.log(JSON.parse(person));
-});
+fetchPersonById(1).then((person) => console.log(JSON.parse(person)));

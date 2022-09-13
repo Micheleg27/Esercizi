@@ -14,9 +14,19 @@
 </html>
 
 <script>
-  let list = document.getElementsByClassName('hero-list-item');
+  let lis = document.getElementsByClassName('hero-list-item');
 
-  list.forEach(element => {
-    element.style:hover = 'red';    
+  Object.keys(lis).forEach(a => {
+    lis[a].addEventListener('mouseenter', function(e){
+      e.target.style.color = 'red';
+    })
   });
+
+  Object.keys(lis).forEach(a => {
+    lis[a].addEventListener('mouseleave', function(e){
+      e.target.style.color = 'transparent';
+    })
+  });
+
+
 </script>

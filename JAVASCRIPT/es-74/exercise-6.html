@@ -1,0 +1,65 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  let form = document.getElementById('person-form');
+  let button = document.querySelector('button');
+  let firstName = document.createElement('input');
+  let label1 = document.createElement('label');
+  label1.setAttribute('name', 'firstName');
+  firstName.setAttribute('placeholder', 'first Name')
+  let lastName = document.createElement('input');
+  let label2 = document.createElement('label');
+  label2.setAttribute('name', 'lastName');
+  lastName.setAttribute('placeholder', 'last Name')
+  let age = document.createElement('input');
+  let label3 = document.createElement('label');
+  label3.textContent = 'age';
+  age.setAttribute('type', 'number');
+
+  function initForm() {
+    
+    form.appendChild(firstName);
+    form.appendChild(lastName);
+    form.appendChild(age);
+  }
+  initForm();
+
+
+  form.addEventListener('submit', function submitPersonForm(event){
+    
+    event.preventDefault();
+
+    let firstNameValue = firstName.value;
+    let lastNameValue = lastName.value;
+    let ageValue = age.value;
+
+    class Person {
+
+      firstName = "";
+      lastName = "";
+      age = 0;
+
+      constructor(firstName, lastName, age){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+      }
+    }
+
+    let person = new Person(firstNameValue, lastNameValue, ageValue);
+
+    console.log(person);
+  });
+  
+
+  button.addEventListener('click', submitPersonForm())
+</script>

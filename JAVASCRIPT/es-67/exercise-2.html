@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center;"></div>
+  </body>
+</html>
+
+<script>
+
+let container = document.querySelector("#container");
+
+  function ciao(item) {
+    let createH = document.createElement("h2");
+    createH.innerText = item.title;
+
+    let createInput = document.createElement("input");
+    createInput.setAttribute("type", "checkbox");
+    createInput.setAttribute("checked", item.completed);
+
+    container.append(createH, createInput);
+  }
+  
+  fetch("https://jsonplaceholder.typicode.com/todos/4.")
+  .then((response) => response.json())
+  .then((list) => ciao(list));
+</script>

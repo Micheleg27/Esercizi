@@ -1,0 +1,55 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's List</h2>
+      <table id="person-table">
+        <tbody>
+
+        </tbody>
+      </table>
+      <button id="add-row">Add row</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  let table = document.getElementById('person-table');
+  let thead = document.createElement('thead');
+  let tbody = document.querySelector('tbody');
+  let tr = document.createElement('tr');
+  let button = document.getElementById('add-row');
+  let th = document.createElement('th');
+  let th2 = document.createElement('th');
+  let th3 = document.createElement('th');
+
+  table.appendChild(thead);
+  thead.appendChild(tr);
+  tr.appendChild(th);
+  tr.appendChild(th2);
+  tr.appendChild(th3);
+  th.innerText = "FirstName";
+  th2.innerText = "LastName";
+  th3.innerText = "age";
+
+  function addRow() {
+    let tr = document.createElement('tr');
+    let input = document.createElement('input');
+    let input2 = document.createElement('input');
+    let input3 = document.createElement('input');
+    let td = document.createElement('td');
+    let td2 = document.createElement('td');
+    let td3 = document.createElement('td');
+
+    tr.appendChild(td);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    td.appendChild(input);
+    td2.appendChild(input2);
+    td3.appendChild(input3);
+    tbody.appendChild(tr);
+    tr.style.height = '35px';
+    tr.style.color = 'blue';
+  }
+
+  button.addEventListener('click', addRow);
+</script>

@@ -1,0 +1,58 @@
+<html>
+  <body>
+    <div id="container">
+      <button type="button" id="fetch-post">Fetch Post</button>
+      <button type="button" id="save-post">Save Post on LocalStorage</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  const btn1 = document.getElementById("fetch-post");
+  const btn2 = document.getElementById("save-post");
+  let post;
+
+  btn1.addEventListener("click", 
+  async function fetchfunct(){
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+    .then(response => response.json())
+    .then(data => {
+      post = data;
+      console.log(post);
+    })
+  }
+  );
+
+
+  btn2.addEventListener("click", 
+  async function savefunct() {
+    localStorage.setItem('post', JSON.stringify(post));
+    console.log(localStorage.getItem('post'));
+  }
+  );
+
+  // async function fetchdchezz() {
+  //   let aueit = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+  //   let variabbile = await aueit.json();
+
+  //   return variabbile;
+  // }
+
+  // async function savedchezz() {
+  //   let midali = JSON.stringify(await fetchdchezz());
+  //   localStorage.setItem("ciaoatutto", midali);
+  // }
+
+  // async function fetchdchezz() {
+  //   let aueit = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+  //   let variabbile = await aueit.text();
+
+  //   return variabbile;
+  // }
+
+  // async function savedchezz() {
+  //   let midali = await fetchdchezz();
+  //   localStorage.setItem("ciaoatutto", midali);
+  // }
+  
+</script>

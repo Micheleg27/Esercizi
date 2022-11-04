@@ -5,7 +5,6 @@ class Person {
     this.lastName = lastName;
     this.age = age;
   }
-
 }
 
 const developer = JSON.stringify(new Person(1, 'Mario', 'Rossi', 25));

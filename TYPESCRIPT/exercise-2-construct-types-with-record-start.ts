@@ -4,14 +4,10 @@
 
 // Fix this use of the `Record` utility type so it constructs a valid type.
 
-type Curr = {
-    name: string,
-    code: string,
-    symbol: string
-}
+type Curr = 'name' | 'code' | 'symbol'
 
-const currency: Record<string, Curr > = {
-    'USA' : {name: "United States dollar", code: "USD", symbol: "$",} 
+const currency: Record<Curr, string > = {
+    name: "United States dollar", code: "USD", symbol: "$",
 };
 
 // Add a type annotation to the `currencies` variable that uses

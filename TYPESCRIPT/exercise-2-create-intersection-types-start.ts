@@ -7,11 +7,11 @@ interface Country {
     code: string;
 }
 
-interface CountryStatistics extends Country {
+interface CountryStatistics {
     population: number;
 }
 
-interface CountryLanguages extends Country {
+interface CountryLanguages {
     languages: string[];
 }
 
@@ -20,7 +20,7 @@ interface CountryLanguages extends Country {
 //
 // This should fix the type error on Line 28.
 
-type CountryWithLanguages = CountryLanguages;
+type CountryWithLanguages = Country & CountryLanguages;
 
 const countryA: CountryWithLanguages = {
     name: "Greece",
@@ -37,7 +37,7 @@ const countryA: CountryWithLanguages = {
 // Add a type annotation with the `CountryWithStatistics` type on
 // the variable `countryB`.
 
-type CountryWithStatistics = CountryStatistics;
+type CountryWithStatistics = Country & CountryStatistics;
 
 const countryB: CountryWithStatistics = {
     name: "China",
